@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Admission Form - Assignment 03</title>
+    <style>
+      fieldset {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Student Admission Form</h1>
+      <p>Web Development Advanced — Batch 2</p>
+    </header>
+
+    <form method="post">
+      <fieldset>
+        <legend><b>Personal Information</b></legend>
+        <p>
+          <label for="fullname">Full Name:</label>
+          <input
+            id="fullname"
+            name="fullname"
+            type="text"
+            placeholder="Enter Full Name"
+            minlength="3"
+            autocomplete="name"
+            required
+          />
+        </p>
+        <p>
+          <label for="email">Email Address:</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            autocomplete="email"
+            placeholder="student@example.com"
+            autocomplete="email"
+            required
+          />
+        </p>
+        <p>
+          <label for="phoneNo">Phone Number:</label>
+          <input
+            id="phoneNo"
+            name="phoneNo"
+            type="tel"
+            placeholder="xxxx-xxxxxxx"
+            required
+          />
+        </p>
+        <p>
+          <label for="age">Age:</label>
+          <input
+            id="age"
+            name="age"
+            type="number"
+            min="16"
+            max="60"
+            placeholder="16 - 60"
+            required
+          />
+        </p>
+        <p>
+          <label for="city">City:</label>
+          <select name="city" id="city" required>
+            <option value="">--Select Your City--</option>
+            <option value="Islamabad">Islamabad</option>
+            <option value="Rawalpindi">Rawalpindi</option>
+            <option value="Peshawar">Peshawar</option>
+            <option value="Lahore">Lahore</option>
+            <option value="Kashmir">Kashmir</option>
+          </select>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend><b>Course Selection</b></legend>
+        <p>
+          <label for="courses">Choose Your Course:</label>
+          <select name="courses" id="courses" required>
+            <option value="">--Select Your Course--</option>
+            <option value="webdev">Web Development</option>
+            <option value="GD">Graphic Design</option>
+            <option value="DM">Digital Marketing</option>
+            <option value="AI">Artificial Intelligence</option>
+          </select>
+        </p>
+      </fieldset>
+
+ 
+      <fieldset>
+        <legend><b>Preferred Class Shift</b></legend>
+        <p>Please select your shift (Required):</p>
+        <p>
+          <input type="radio" id="morning" name="shift" value="morning" required />
+          <label for="morning">Morning</label>
+        </p>
+        <p>
+          <input type="radio" id="evening" name="shift" value="evening" required />
+          <label for="evening">Evening</label>
+        </p>
+        <p>
+          <input type="radio" id="weekend" name="shift" value="weekend" required />
+          <label for="weekend">Weekend</label>
+        </p>
+      </fieldset>
+
+
+      <fieldset>
+        <legend><b>Existing Skills (Optional)</b></legend>
+        <p>Select any skills you already know:</p>
+        <p>
+          <input type="checkbox" id="html" name="skills" value="HTML" />
+          <label for="html">HTML</label>
+        </p>
+        <p>
+          <input type="checkbox" id="css" name="skills" value="CSS" />
+          <label for="css">CSS</label>
+        </p>
+        <p>
+          <input type="checkbox" id="javascript" name="skills" value="JavaScript" />
+          <label for="javascript">JavaScript</label>
+        </p>
+        <p>
+          <input type="checkbox" id="python" name="skills" value="Python" />
+          <label for="python">Python</label>
+        </p>
+      </fieldset>
+
+
+      <fieldset>
+        <legend><b>Motivation</b></legend>
+        <p>
+          <label for="motivation">Why do you want to join this course?</label><br />
+          <textarea
+            id="motivation"
+            name="motivation"
+            rows="4"
+            cols="40"
+            minlength="10"
+            maxlength="200"
+            placeholder="Write your reason here..."
+            required
+          ></textarea>
+        </p>
+      </fieldset>
+
+      <!-- Additional Information Fieldset (Portfolio & Start Date) -->
+      <fieldset>
+        <legend><b>Additional Information (Optional)</b></legend>
+        <p>
+          <label for="portfolio">Portfolio Website URL:</label>
+          <input
+            id="portfolio"
+            name="portfolio"
+            type="url"
+            placeholder="https://example.com"
+          />
+        </p>
+        <p>
+          <label for="date">Preferred Starting Date:</label>
+          <input
+            id="startdate" name="date" type="date"
+          />
+        </p>
+      </fieldset>
+
+      <p>
+        <button type="submit">Submit Application</button>
+        <button type="reset">Clear Form</button>
+      </p>
+    </form>
+
+    <footer>
+        <hr>
+      <p>&copy; 2026 Web Development Advanced — Batch 2. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
